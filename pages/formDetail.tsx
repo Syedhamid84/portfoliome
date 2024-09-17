@@ -2,7 +2,7 @@
 import { useRouter } from 'next/router';
 import React from 'react'
 
-const Login = () => {
+const FormDetail = () => {
 
     const router = useRouter();
     const { query } = router;
@@ -44,4 +44,4 @@ const Login = () => {
         </div>
     )
 };
-export default Login;
+export default FormDetail;
