@@ -69,7 +69,7 @@ const ResumeForm = () => {
         handleChange(e);
 
         // update the local state with new values
-        setFormvalues((prevValues: any) => ({
+        setFormvalues((prevValues) => ({
             ...prevValues,
             [name]: value,
 

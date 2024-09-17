@@ -1,7 +1,8 @@
+"use client";
 import { useRouter } from 'next/router';
 import React from 'react'
 
-const login = () => {
+const Login = () => {
 
     const router = useRouter();
     const { query } = router;
@@ -43,4 +44,4 @@ const login = () => {
         </div>
     )
 };
-export default login;
+export default Login;
