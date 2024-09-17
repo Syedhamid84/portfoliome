@@ -9,9 +9,6 @@ import React, { useState } from 'react'
 import { formSchema } from "@/components/validationSchema/schema";
 import { useRouter } from 'next/router';
 
-
-
-
 const ResumeForm = () => {
 
     const router = useRouter()
@@ -61,9 +58,9 @@ const ResumeForm = () => {
 
     });
 
-    const { errors, touched, values, handleChange, handleBlur, handleSubmit } = formik;
+    const { errors, touched, handleChange, handleBlur, handleSubmit } = formik;
 
-    const handleInputchange = (e: any) => {
+    const handleInputchange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target;
 
         handleChange(e);
@@ -77,7 +74,7 @@ const ResumeForm = () => {
         }));
     }
 
-    const handlekeydown = (e: any) => {
+    const handlekeydown = (e: React.KeyboardEvent<HTMLFormElement>) => {
         if (e.key === "Enter") {
             e.preventDefault();
             handleSubmit();
