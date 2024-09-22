@@ -40,8 +40,18 @@ const ResumeForm = () => {
             console.log("all input values", formvalues);
             // setFormvalues(values);
 
-            const query = new URLSearchParams(formvalues).toString();
-            router.push(`/formDetail?${query}`)
+            // pushing data by url query
+            // const query = new URLSearchParams(formvalues).toString();
+            // router.push(`/formDetail?${query}`)
+
+            localStorage.setItem("forms_values", JSON.stringify(formvalues));
+            router.push(`/formDetail`)
+
+            // var object = localStorage[form_values];
+            // localStorage[form_values] = FormData;
+
+
+
 
             resetForm();
             setFormvalues({
@@ -204,7 +214,7 @@ const ResumeForm = () => {
                         value={formvalues.usermessage}
                         onChange={handleInputchange}
                         onBlur={handleBlur}
-                        placeholder="Type your message here" className='py-6 w-full ' />
+                        placeholder="Type your message here" className='py-6 w-full resize-none' />
                     {typeof errors.usermessage === 'string' && touched.usermessage && (
                         <span className='text-red-500 text-sm p-1'>
                             {errors.usermessage}
