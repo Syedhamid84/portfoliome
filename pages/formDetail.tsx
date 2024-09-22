@@ -6,7 +6,7 @@ import jsPDF from 'jspdf';
 
 
 const FormDetail = () => {
-    const pdfRef = useRef();
+    const pdfRef = useRef<HTMLDivElement | null>(null);
 
 
 
@@ -38,6 +38,11 @@ const FormDetail = () => {
 
     const downloadPDF = () => {
         const input = pdfRef.current;
+        // Check if the ref is null before proceeding
+        if (!input) {
+            console.error("pdfRef is not attached to a valid DOM element.");
+            return;
+        }
         html2canvas(input).then((canvas) => {
             const imgData = canvas.toDataURL("");
             const pdf = new jsPDF("p", "mm", "a4", true);
