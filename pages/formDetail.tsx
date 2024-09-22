@@ -1,12 +1,13 @@
 "use client";
-import { Download, FileDown } from 'lucide-react';
+import { FileDown } from 'lucide-react';
 import React, { useEffect, useRef, useState } from 'react'
 import html2canvas from 'html2canvas';
 import jsPDF from 'jspdf';
 
 
 const FormDetail = () => {
-    const pdfRef = useRef();
+    const pdfRef = useRef<HTMLDivElement>(null);  // Ensure type safety
+
 
     const [formValues, setFormValues] = useState({
         firstname: "",
@@ -27,9 +28,6 @@ const FormDetail = () => {
         // console.log("state values", formValues);
         const valuesLocalStorage = JSON.parse(localStorage.getItem("forms_values") || "[]")  // The || operator acts as a fallback mechanism. If the getItem("forms_values") returns null (i.e., the key doesn't exist), this part ensures that an empty array string ("[]") is used instead
         setFormValues(valuesLocalStorage);
-        console.log("cartLocalStorage", valuesLocalStorage);
-        console.log("first value", formValues);
-
     }, [])
 
     // useEffect(() => {
@@ -39,6 +37,7 @@ const FormDetail = () => {
 
     const downloadPDF = () => {
         const input = pdfRef.current;
+        const pdfRef = useRef();
         html2canvas(input).then((canvas) => {
             const imgData = canvas.toDataURL("");
             const pdf = new jsPDF("p", "mm", "a4", true);
