@@ -6,7 +6,8 @@ import jsPDF from 'jspdf';
 
 
 const FormDetail = () => {
-    const pdfRef = useRef<HTMLDivElement>(null);  // Ensure type safety
+    const pdfRef = useRef();
+
 
 
     const [formValues, setFormValues] = useState({
@@ -37,7 +38,6 @@ const FormDetail = () => {
 
     const downloadPDF = () => {
         const input = pdfRef.current;
-        const pdfRef = useRef();
         html2canvas(input).then((canvas) => {
             const imgData = canvas.toDataURL("");
             const pdf = new jsPDF("p", "mm", "a4", true);
