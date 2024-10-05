@@ -6,7 +6,7 @@ import Hobicourse from '@/components/arhamComponents/hobicourse';
 import Experience from '@/components/arhamComponents/experience';
 import Skills from '@/components/arhamComponents/skills';
 
-export const ArhamResume = () => {
+const ArhamResume = () => {
     return (
         <>
 
