@@ -2,14 +2,14 @@ import React from 'react'
 
 const Education = () => {
     return (
-        <div className='flex flex-col ml-10 mt-10 gap-5'>
+        <div className='flex flex-col  mt-10 gap-5'>
             <h1 className='font-bold text-4xl text-[#000000]'>Education</h1>
             <div className='flex flex-col gap-5'>
                 {educationDetails.map((Item, index) => {
                     return (
                         <div key={index} className='flex '>
 
-                            <div className='flex gap-5  bgred-500'>
+                            <div className='flex gap-5 bgred-500'>
                                 <div className='h-2 w-2 mt-4 rounded-full bg-black'>
                                 </div>
 

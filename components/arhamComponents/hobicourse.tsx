@@ -1,11 +1,10 @@
-import index from '@/pages';
 import React from 'react'
 
 const Hobicourse = () => {
     return (
         <>
 
-            <div className='ml-10 mt-10 flex flex-col gap-5 '>
+            <div className='mt-10 flex flex-col gap-5 '>
                 <h1 className='font-bold text-4xl'>Hobbies</h1>
                 <div className='flex flex-col gap-3 bg-ed-400'>
                     {hobbyname.map((Item, index) => {
@@ -25,7 +24,7 @@ const Hobicourse = () => {
 
             </div>
 
-            <div className='ml-10 mt-10 flex flex-col gap-5 '>
+            <div className='mt-10 flex flex-col gap-5 '>
                 <h1 className='font-bold text-4xl'>Course</h1>
                 <div className='flex flex-col gap-3 bg-ed-400'>
                     {courselist.map((Item, index) => {
