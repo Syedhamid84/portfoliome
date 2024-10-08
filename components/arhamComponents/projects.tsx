@@ -2,22 +2,31 @@ import React from 'react'
 
 const Projects = () => {
     return (
-        <div className='flex flex-col gap-3 '>
+        <div className='flex flex-col gap-3 mt-10'>
             <h1 className='font-bold text-4xl'>Projects</h1>
             <h2 className='font-bold text-2xl text-[#FFBA52]'>Mobile Applications</h2>
 
-            <div className='flex flex-col gap-3 w-[600px]'>
+            <div className='flex flex-col gap-3 w-[615px]'>
                 {ProjectData.map((Item, index) => {
                     return (
-                        <div key={index}>
-                            <div className='flex gap-2'>
-                                <h1>{Item.projectname} </h1>
+                        <div key={index} className='flex'>
 
-                            </div>
-                            <div>{Item.projectheading}</div>
+                            <div className='flex gap-5 bg-reen-500'>
 
-                            <div>
-                                {Item.projectdescription}
+                                <div className='h-2 w-2 mt-4 rounded-full bg-black'>
+                                </div>
+                                <div className='flex flex-col'>
+
+                                    <span className='flex'>
+                                        <h1 className='font-bold text-2xl'>{Item.projectname} </h1>
+
+                                    </span>
+                                    <span className='font-normal text-sm'>{Item.projectheading}</span>
+
+                                    <span className='font-normal text-xl mt-3'>
+                                        {Item.projectdescription}
+                                    </span>
+                                </div>
                             </div>
 
                         </div>
