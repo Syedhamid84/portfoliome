@@ -11,8 +11,6 @@ const Projects = () => {
             <h2 className='font-bold text-2xl text-[#FFBA52]'>Mobile Applications</h2>
 
             <div className='flex gap-8'>
-
-
                 <div className='flex flex-col gap-5 w-[565px]'>
                     {ProjectData.map((Item, index) => {
                         return (
@@ -27,16 +25,18 @@ const Projects = () => {
                                             <div className='flex flex-col bgred-400'>
                                                 <div className='flex gap-3'>
                                                     <h1 className='font-bold text-2xl'>{Item.projectname} </h1>
-                                                    <a href={Item.iosLink} className='flex justify-center items-center w-8 h-8 rounded-full bg-[#E7E7E7]'>
+                                                    {Item.iosLink && (
 
-                                                        <Image src={Appstore} alt='' className='h-4 w-4' />
+                                                        <a href={Item.iosLink} className='flex justify-center items-center w-8 h-8 rounded-full bg-[#E7E7E7]'>
+                                                            <Image src={Appstore} alt='' className='h-4 w-4' />
+                                                        </a>
+                                                    )}
+                                                    {Item.androidLink && (
 
-                                                    </a>
-                                                    <a href={Item.androidLink} className='flex justify-center items-center w-8 h-8 rounded-full bg-[#E7E7E7]'>
-                                                        <Image src={Playstore} alt='' className='' />
-
-
-                                                    </a>
+                                                        <a href={Item.androidLink} className='flex justify-center items-center w-8 h-8 rounded-full bg-[#E7E7E7]'>
+                                                            <Image src={Playstore} alt='' className='' />
+                                                        </a>
+                                                    )}
                                                 </div>
                                                 <span className='font-normal text-sm'>{Item.projectheading}</span>
 

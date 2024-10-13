@@ -6,6 +6,7 @@ import Hobicourse from '@/components/arhamComponents/hobicourse';
 import Experience from '@/components/arhamComponents/experience';
 import Skills from '@/components/arhamComponents/skills';
 import Projects from '@/components/arhamComponents/projects';
+import WebProjects from '@/components/arhamComponents/webprojects';
 
 const ArhamResume = () => {
     return (
@@ -29,6 +30,10 @@ const ArhamResume = () => {
 
             <div className='flex gap-5 mx-10'>
                 <Projects />
+            </div>
+
+            <div className='flex gap-5 mx-10'>
+                <WebProjects />
             </div>
 
         </>
