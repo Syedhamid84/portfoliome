@@ -17,25 +17,28 @@ const Projects = () => {
                             <div key={index} className='flex'>
 
                                 <div className='flex flex-col gap-5 bg-reen-500'>
-                                    <div className='flex gap-4 '>
+                                    <div className='flex gap-4 bred-300'>
 
                                         <div className='h-2 w-2 mt-4 rounded-full bg-black'>
                                         </div>
                                         <div className='flex justify-between w-full'>
-                                            <div className='flex flex-col bgred-400'>
+                                            <div className='flex flex-col w-[480px]'>
                                                 <div className='flex gap-3'>
                                                     <h1 className='font-bold text-2xl'>{Item.projectname} </h1>
                                                     {Item.iosLink && (
-
-                                                        <a href={Item.iosLink} className='flex justify-center items-center w-8 h-8 rounded-full bg-[#E7E7E7]'>
-                                                            <Image src={Appstore} alt='' className='h-4 w-4' />
-                                                        </a>
+                                                        <div className='flex justify-center items-center w-8 h-8 rounded-full'>
+                                                            <a href={Item.iosLink} target='_blank' className='flex justify-center items-center w-8 h-8 rounded-full bg-[#E7E7E7]'>
+                                                                <Image src={Appstore} alt='' className='h-4 w-4' />
+                                                            </a>
+                                                        </div>
                                                     )}
                                                     {Item.androidLink && (
+                                                        <div className='flex justify-center items-center w-8 h-8 rounded-full'>
+                                                            <a href={Item.androidLink} target='_blank' className='flex justify-center items-center w-8 h-8 rounded-full bg-[#E7E7E7]'>
+                                                                <Image src={Playstore} alt='' className='' />
+                                                            </a>
+                                                        </div>
 
-                                                        <a href={Item.androidLink} className='flex justify-center items-center w-8 h-8 rounded-full bg-[#E7E7E7]'>
-                                                            <Image src={Playstore} alt='' className='' />
-                                                        </a>
                                                     )}
                                                 </div>
                                                 <span className='font-normal text-sm'>{Item.projectheading}</span>
@@ -75,33 +78,35 @@ const Projects = () => {
                         return (
                             <div key={index} className='flex'>
 
-                                <div className='flex flex-col gap-5 bg-reen-500'>
+                                <div className='flex flex-col gap-5 bgreen-500'>
                                     <div className='flex gap-4 '>
 
                                         <div className='h-2 w-2 mt-4 rounded-full bg-black'>
                                         </div>
                                         <div className='flex justify-between w-full'>
-                                            <div className='flex flex-col bgred-400'>
+                                            <div className='flex flex-col w-[460px]'>
                                                 <div className='flex gap-3'>
                                                     <h1 className='font-bold text-2xl'>{Item.projectname} </h1>
                                                     {Item.iosLink && (
-
-                                                        <a href={Item.iosLink} className='flex justify-center items-center w-8 h-8 rounded-full bg-[#E7E7E7]'>
-                                                            <Image src={Appstore} alt='' className='h-4 w-4' />
-                                                        </a>
+                                                        <div className='flex justify-center items-center w-8 h-8'>
+                                                            <a href={Item.iosLink} target='_blank' className='w-8 h-8 rounded-full bg-[#E7E7E7]'>
+                                                                <Image src={Appstore} alt='' className='h-4 w-4' />
+                                                            </a>
+                                                        </div>
                                                     )}
                                                     {Item.androidLink && (
-
-                                                        <a href={Item.androidLink} className='flex justify-center items-center w-8 h-8 rounded-full bg-[#E7E7E7]'>
-                                                            <Image src={Playstore} alt='' className='' />
-                                                        </a>
+                                                        <div className='flex justify-center items-center w-8 h-8 rounded-full'>
+                                                            <a href={Item.androidLink} target='_blank' className='flex justify-center items-center w-8 h-8 rounded-full bg-[#E7E7E7]'>
+                                                                <Image src={Playstore} alt='' className='' />
+                                                            </a>
+                                                        </div>
                                                     )}
                                                 </div>
                                                 <span className='font-normal text-sm'>{Item.projectheading}</span>
 
                                                 { }
                                             </div>
-                                            <div className='flex gap-2 flex-wrap  w-[250px]'>
+                                            <div className='flex gap-2 flex-wrap  max-w-[240px]'>
                                                 {Item.skills && Item.skills.map((skill, i) => (
                                                     <button key={i} className='px-4 py-0.5 bg-[#E7E7E7] text-black rounded-3xl font-normal text-xs'>
                                                         {skill}

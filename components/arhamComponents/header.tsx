@@ -10,8 +10,8 @@ export const Header = () => {
     return (
         <div className='flex justify-between p-10'>
             <div className='flex gap-5 items-center'>
-                <div className='h-[210px] w-[210px] rounded-full bg-[#FFBA52]'>
-                    <Image className='w-full' src={arhamImage} alt="arham_image" />
+                <div className='flex justify-center items-center h-[210px] w-[210px] rounded-full bg-[#FFBA52]  '>
+                    <Image className='h-[210px] w-[210px] rounded-full ' src={arhamImage} alt="arham_image" />
                 </div>
                 <div className='flex flex-col gap-2'>
 
@@ -25,10 +25,13 @@ export const Header = () => {
             <div className='flex flex-col gap-3'>
                 {contactdetails.map((Item, index) => {
                     return (
-                        <div key={index} className='flex gap-4 items-center'>
-                            <Image src={Item.contactIcon} alt='iconImage' className='w-[42px] h-[42px] ' />
+                        <div key={index} className='flex gap-4 items-center '>
+                            <div className='flex justify-center items-center w-[42px] h-[42px] rounded-full'>
 
-                            <span>{Item.contactVale} </span>
+                                <Image src={Item.contactIcon} alt='iconImage' className='w-[42px] h-[42px] ' />
+                            </div>
+
+                            <a href={Item.link} target='_blank'>{Item.contactVale} </a>
 
 
                         </div>
@@ -57,6 +60,7 @@ export const contactdetails = [
     {
         contactIcon: linkedinImage,
         contactVale: "Linkedin/arham-sarwar-a1b56b176 🔗",
+        link: "https://www.linkedin.com/in/arham-sarwar-a1b56b176/"
     },
 
 

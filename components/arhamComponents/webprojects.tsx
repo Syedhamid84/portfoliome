@@ -22,14 +22,16 @@ const WebProjects = () => {
                                         <div className='h-2 w-2 mt-4 rounded-full bg-black'>
                                         </div>
                                         <div className='flex justify-between w-full'>
-                                            <div className='flex flex-col bgred-400'>
+                                            <div className='flex flex-col bgred-400 w-[460px]'>
                                                 <div className='flex gap-3'>
                                                     <h1 className='font-bold text-2xl'>{Item.projectname} </h1>
                                                     {Item.WebLink && (
+                                                        <div className='flex justify-center items-center w-8 h-8 rounded-full'>
 
-                                                        <a href={Item.WebLink} className='flex justify-center items-center w-8 h-8 rounded-full bg-[#E7E7E7]'>
-                                                            <Image src={Globe} alt='' className='h-4 w-4' />
-                                                        </a>
+                                                            <a href={Item.WebLink} target='_blank' className='flex justify-center items-center w-8 h-8 rounded-full bg-[#E7E7E7]'>
+                                                                <Image src={Globe} alt='' className='h-4 w-4' />
+                                                            </a>
+                                                        </div>
                                                     )}
 
                                                 </div>
@@ -69,21 +71,20 @@ const WebProjects = () => {
                     {ProjectDataSecond.map((Item, index) => {
                         return (
                             <div key={index} className='flex'>
-
                                 <div className='flex flex-col gap-5 bg-reen-500'>
                                     <div className='flex gap-4 '>
-
                                         <div className='h-2 w-2 mt-4 rounded-full bg-black'>
                                         </div>
                                         <div className='flex justify-between w-full'>
-                                            <div className='flex flex-col bgred-400'>
+                                            <div className='flex flex-col bgred-400 w-[460px]'>
                                                 <div className='flex gap-3'>
                                                     <h1 className='font-bold text-2xl'>{Item.projectname} </h1>
                                                     {Item.WebLink && (
-
-                                                        <a href={Item.WebLink} className='flex justify-center items-center w-8 h-8 rounded-full bg-[#E7E7E7]'>
-                                                            <Image src={Globe} alt='' className='h-4 w-4' />
-                                                        </a>
+                                                        <div className='flex justify-center items-center w-8 h-8 rounded-full'>
+                                                            <a href={Item.WebLink} target='_blank' className='flex justify-center items-center w-8 h-8 rounded-full bg-[#E7E7E7]'>
+                                                                <Image src={Globe} alt='' className='h-4 w-4' />
+                                                            </a>
+                                                        </div>
                                                     )}
 
                                                 </div>
@@ -91,7 +92,7 @@ const WebProjects = () => {
 
                                                 { }
                                             </div>
-                                            <div className='flex gap-2 flex-wrap  w-[250px]'>
+                                            <div className='flex gap-2 flex-wrap  max-w-[250px]'>
                                                 {Item.skills && Item.skills.map((skill, i) => (
                                                     <button key={i} className='px-4 py-0.5 bg-[#E7E7E7] text-black rounded-3xl font-normal text-xs'>
                                                         {skill}
@@ -107,15 +108,11 @@ const WebProjects = () => {
                                         </span>
                                     </div>
                                 </div>
-
                             </div>
-
                         );
                     })}
                 </div>
-
             </div>
-
         </div>
     )
 };
