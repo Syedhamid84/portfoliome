@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useRef } from 'react'
 import Header from '@/components/arhamComponents/header';
 import About from '@/components/arhamComponents/about';
 import Education from '@/components/arhamComponents/education';
